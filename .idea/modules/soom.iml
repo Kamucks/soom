@@ -22,6 +22,16 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="sbt: org.scala-lang:scala-library:2.12.4:jar" level="project" />
+    <orderEntry type="library" name="sbt: joda-time:joda-time:2.9.9:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.typesafe.play:play-json_2.12:2.6.7:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.typesafe.play:play-functional_2.12:2.6.7:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.8.9:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.8.9:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.fasterxml.jackson.core:jackson-databind:2.8.9:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.fasterxml.jackson.core:jackson-core:2.8.9:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.fasterxml.jackson.core:jackson-annotations:2.8.9:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.pauldijou:jwt-play-json_2.12:0.14.1:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.pauldijou:jwt-json-common_2.12:0.14.1:jar" level="project" />
     <orderEntry type="library" name="sbt: org.bouncycastle:bcprov-jdk15on:1.57:jar" level="project" />
     <orderEntry type="library" name="sbt: org.bouncycastle:bcpkix-jdk15on:1.57:jar" level="project" />
     <orderEntry type="library" name="sbt: com.pauldijou:jwt-core_2.12:0.14.1:jar" level="project" />
@@ -63,5 +73,6 @@
     <orderEntry type="library" name="sbt: io.circe:circe-numbers_2.12:0.9.0:jar" level="project" />
     <orderEntry type="library" name="sbt: io.circe:circe-parser_2.12:0.9.0:jar" level="project" />
     <orderEntry type="library" name="sbt: org.spire-math:jawn-parser_2.12:0.11.0:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.softwaremill.sttp:core_2.12:1.1.4:jar" level="project" />
   </component>
 </module>

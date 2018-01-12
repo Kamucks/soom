@@ -7,58 +7,192 @@
 		revision="0.1"
 		conf="compile"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, pom, scala-tool"
-		date="20180111134636"/>
+		date="20180111155813"/>
 	<dependencies>
-		<module organisation="com.pauldijou" name="jwt-core_2.12">
-			<revision name="0.14.1" status="release" pubdate="20171030055447" resolver="public" artresolver="public" homepage="http://pauldijou.fr/jwt-scala/" extra-info.apiURL="http://pauldijou.fr/jwt-scala/api/" downloaded="true" searched="true" default="false" conf="default, compile, runtime, default(compile), master" position="38">
+		<module organisation="com.typesafe.play" name="play-json_2.12">
+			<revision name="2.6.7" status="release" pubdate="20171026151229" resolver="public" artresolver="public" homepage="https://github.com/playframework/play-json" downloaded="true" searched="true" default="false" conf="default, compile, runtime, default(compile), master" position="45">
+				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
+				<metadata-artifact status="successful" details="" size="4475" time="105" location="/home/spike/.ivy2/cache/com.typesafe.play/play-json_2.12/ivy-2.6.7.xml" searched="true" original-local-location="/home/spike/.ivy2/cache/com.typesafe.play/play-json_2.12/ivy-2.6.7.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-json_2.12/2.6.7/play-json_2.12-2.6.7.pom"/>
+				<caller organisation="default" name="soom_2.12" conf="compile" rev="2.6.7" rev-constraint-default="2.6.7" rev-constraint-dynamic="2.6.7" callerrev="0.1"/>
+				<artifacts>
+					<artifact name="play-json_2.12" type="jar" ext="jar" status="successful" details="" size="659454" time="464" location="/home/spike/.ivy2/cache/com.typesafe.play/play-json_2.12/jars/play-json_2.12-2.6.7.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/play-json_2.12/2.6.7/play-json_2.12-2.6.7.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.fasterxml.jackson.datatype" name="jackson-datatype-jsr310">
+			<revision name="2.8.9" status="release" pubdate="20170611220823" resolver="public" artresolver="public" homepage="" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="52">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="successful" details="" size="4533" time="92" location="/home/spike/.ivy2/cache/com.fasterxml.jackson.datatype/jackson-datatype-jsr310/ivy-2.8.9.xml" searched="true" original-local-location="/home/spike/.ivy2/cache/com.fasterxml.jackson.datatype/jackson-datatype-jsr310/ivy-2.8.9.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.8.9/jackson-datatype-jsr310-2.8.9.pom"/>
+				<caller organisation="com.typesafe.play" name="play-json_2.12" conf="default, compile, runtime, master" rev="2.8.9" rev-constraint-default="2.8.9" rev-constraint-dynamic="2.8.9" callerrev="2.6.7"/>
+				<artifacts>
+					<artifact name="jackson-datatype-jsr310" type="bundle" ext="jar" status="successful" details="" size="90059" time="254" location="/home/spike/.ivy2/cache/com.fasterxml.jackson.datatype/jackson-datatype-jsr310/bundles/jackson-datatype-jsr310-2.8.9.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.8.9/jackson-datatype-jsr310-2.8.9.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.fasterxml.jackson.datatype" name="jackson-datatype-jdk8">
+			<revision name="2.8.9" status="release" pubdate="20170611220811" resolver="public" artresolver="public" homepage="" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="51">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="successful" details="" size="2251" time="91" location="/home/spike/.ivy2/cache/com.fasterxml.jackson.datatype/jackson-datatype-jdk8/ivy-2.8.9.xml" searched="true" original-local-location="/home/spike/.ivy2/cache/com.fasterxml.jackson.datatype/jackson-datatype-jdk8/ivy-2.8.9.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.8.9/jackson-datatype-jdk8-2.8.9.pom"/>
+				<caller organisation="com.typesafe.play" name="play-json_2.12" conf="default, compile, runtime, master" rev="2.8.9" rev-constraint-default="2.8.9" rev-constraint-dynamic="2.8.9" callerrev="2.6.7"/>
+				<artifacts>
+					<artifact name="jackson-datatype-jdk8" type="bundle" ext="jar" status="successful" details="" size="33877" time="159" location="/home/spike/.ivy2/cache/com.fasterxml.jackson.datatype/jackson-datatype-jdk8/bundles/jackson-datatype-jdk8-2.8.9.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.8.9/jackson-datatype-jdk8-2.8.9.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.fasterxml.jackson.core" name="jackson-databind">
+			<revision name="2.8.9" status="release" pubdate="20170611175351" resolver="public" artresolver="public" homepage="http://github.com/FasterXML/jackson" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="50">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="successful" details="" size="5426" time="92" location="/home/spike/.ivy2/cache/com.fasterxml.jackson.core/jackson-databind/ivy-2.8.9.xml" searched="true" original-local-location="/home/spike/.ivy2/cache/com.fasterxml.jackson.core/jackson-databind/ivy-2.8.9.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.8.9/jackson-databind-2.8.9.pom"/>
+				<caller organisation="com.typesafe.play" name="play-json_2.12" conf="default, compile, runtime, master" rev="2.8.9" rev-constraint-default="2.8.9" rev-constraint-dynamic="2.8.9" callerrev="2.6.7"/>
+				<caller organisation="com.fasterxml.jackson.datatype" name="jackson-datatype-jdk8" conf="compile, runtime" rev="2.8.9" rev-constraint-default="2.8.9" rev-constraint-dynamic="2.8.9" callerrev="2.8.9"/>
+				<caller organisation="com.fasterxml.jackson.datatype" name="jackson-datatype-jsr310" conf="compile, runtime" rev="2.8.9" rev-constraint-default="2.8.9" rev-constraint-dynamic="2.8.9" callerrev="2.8.9"/>
+				<artifacts>
+					<artifact name="jackson-databind" type="bundle" ext="jar" status="successful" details="" size="1242477" time="591" location="/home/spike/.ivy2/cache/com.fasterxml.jackson.core/jackson-databind/bundles/jackson-databind-2.8.9.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.8.9/jackson-databind-2.8.9.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.fasterxml.jackson.core" name="jackson-annotations">
+			<revision name="2.8.9" status="release" pubdate="20170611173719" resolver="public" artresolver="public" homepage="http://github.com/FasterXML/jackson" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="49">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="successful" details="" size="1848" time="91" location="/home/spike/.ivy2/cache/com.fasterxml.jackson.core/jackson-annotations/ivy-2.8.9.xml" searched="true" original-local-location="/home/spike/.ivy2/cache/com.fasterxml.jackson.core/jackson-annotations/ivy-2.8.9.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.8.9/jackson-annotations-2.8.9.pom"/>
+				<caller organisation="com.typesafe.play" name="play-json_2.12" conf="default, compile, runtime, master" rev="2.8.9" rev-constraint-default="2.8.9" rev-constraint-dynamic="2.8.9" callerrev="2.6.7"/>
+				<caller organisation="com.fasterxml.jackson.datatype" name="jackson-datatype-jsr310" conf="compile, runtime" rev="2.8.0" rev-constraint-default="2.8.0" rev-constraint-dynamic="2.8.0" callerrev="2.8.9"/>
+				<caller organisation="com.fasterxml.jackson.core" name="jackson-databind" conf="compile, runtime" rev="2.8.0" rev-constraint-default="2.8.0" rev-constraint-dynamic="2.8.0" callerrev="2.8.9"/>
+				<artifacts>
+					<artifact name="jackson-annotations" type="bundle" ext="jar" status="successful" details="" size="55784" time="252" location="/home/spike/.ivy2/cache/com.fasterxml.jackson.core/jackson-annotations/bundles/jackson-annotations-2.8.9.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.8.9/jackson-annotations-2.8.9.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+			<revision name="2.8.0" evicted="latest-revision" evicted-reason="" downloaded="false" searched="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="-1">
+				<evicted-by rev="2.8.9"/>
+				<caller organisation="com.fasterxml.jackson.datatype" name="jackson-datatype-jsr310" conf="compile, runtime" rev="2.8.0" rev-constraint-default="2.8.0" rev-constraint-dynamic="2.8.0" callerrev="2.8.9"/>
+				<caller organisation="com.fasterxml.jackson.core" name="jackson-databind" conf="compile, runtime" rev="2.8.0" rev-constraint-default="2.8.0" rev-constraint-dynamic="2.8.0" callerrev="2.8.9"/>
+				<artifacts>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.fasterxml.jackson.core" name="jackson-core">
+			<revision name="2.8.9" status="release" pubdate="20170611174341" resolver="public" artresolver="public" homepage="https://github.com/FasterXML/jackson-core" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="48">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="successful" details="" size="5415" time="95" location="/home/spike/.ivy2/cache/com.fasterxml.jackson.core/jackson-core/ivy-2.8.9.xml" searched="true" original-local-location="/home/spike/.ivy2/cache/com.fasterxml.jackson.core/jackson-core/ivy-2.8.9.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-core/2.8.9/jackson-core-2.8.9.pom"/>
+				<caller organisation="com.typesafe.play" name="play-json_2.12" conf="default, compile, runtime, master" rev="2.8.9" rev-constraint-default="2.8.9" rev-constraint-dynamic="2.8.9" callerrev="2.6.7"/>
+				<caller organisation="com.fasterxml.jackson.datatype" name="jackson-datatype-jdk8" conf="compile, runtime" rev="2.8.9" rev-constraint-default="2.8.9" rev-constraint-dynamic="2.8.9" callerrev="2.8.9"/>
+				<caller organisation="com.fasterxml.jackson.datatype" name="jackson-datatype-jsr310" conf="compile, runtime" rev="2.8.9" rev-constraint-default="2.8.9" rev-constraint-dynamic="2.8.9" callerrev="2.8.9"/>
+				<caller organisation="com.fasterxml.jackson.core" name="jackson-databind" conf="compile, runtime" rev="2.8.9" rev-constraint-default="2.8.9" rev-constraint-dynamic="2.8.9" callerrev="2.8.9"/>
+				<artifacts>
+					<artifact name="jackson-core" type="bundle" ext="jar" status="successful" details="" size="282633" time="365" location="/home/spike/.ivy2/cache/com.fasterxml.jackson.core/jackson-core/bundles/jackson-core-2.8.9.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-core/2.8.9/jackson-core-2.8.9.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="joda-time" name="joda-time">
+			<revision name="2.9.9" status="release" pubdate="20170323063313" resolver="public" artresolver="public" homepage="http://www.joda.org/joda-time/" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="47">
+				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="successful" details="" size="34627" time="126" location="/home/spike/.ivy2/cache/joda-time/joda-time/ivy-2.9.9.xml" searched="true" original-local-location="/home/spike/.ivy2/cache/joda-time/joda-time/ivy-2.9.9.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/joda-time/joda-time/2.9.9/joda-time-2.9.9.pom"/>
+				<caller organisation="com.typesafe.play" name="play-json_2.12" conf="default, compile, runtime, master" rev="2.9.9" rev-constraint-default="2.9.9" rev-constraint-dynamic="2.9.9" callerrev="2.6.7"/>
+				<artifacts>
+					<artifact name="joda-time" type="jar" ext="jar" status="successful" details="" size="634048" time="279" location="/home/spike/.ivy2/cache/joda-time/joda-time/jars/joda-time-2.9.9.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/joda-time/joda-time/2.9.9/joda-time-2.9.9.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.typesafe.play" name="play-functional_2.12">
+			<revision name="2.6.7" status="release" pubdate="20171026151224" resolver="public" artresolver="public" homepage="https://github.com/playframework/play-json" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="46">
+				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
+				<metadata-artifact status="successful" details="" size="1539" time="94" location="/home/spike/.ivy2/cache/com.typesafe.play/play-functional_2.12/ivy-2.6.7.xml" searched="true" original-local-location="/home/spike/.ivy2/cache/com.typesafe.play/play-functional_2.12/ivy-2.6.7.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/play/play-functional_2.12/2.6.7/play-functional_2.12-2.6.7.pom"/>
+				<caller organisation="com.typesafe.play" name="play-json_2.12" conf="default, compile, runtime, master" rev="2.6.7" rev-constraint-default="2.6.7" rev-constraint-dynamic="2.6.7" callerrev="2.6.7"/>
+				<artifacts>
+					<artifact name="play-functional_2.12" type="jar" ext="jar" status="successful" details="" size="177939" time="299" location="/home/spike/.ivy2/cache/com.typesafe.play/play-functional_2.12/jars/play-functional_2.12-2.6.7.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/play/play-functional_2.12/2.6.7/play-functional_2.12-2.6.7.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.pauldijou" name="jwt-play-json_2.12">
+			<revision name="0.14.1" status="release" pubdate="20171030055454" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://pauldijou.fr/jwt-scala/" extra-info.apiURL="http://pauldijou.fr/jwt-scala/api/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="39">
 				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-				<metadata-artifact status="successful" details="" size="2319" time="108" location="/home/spike/.ivy2/cache/com.pauldijou/jwt-core_2.12/ivy-0.14.1.xml" searched="true" original-local-location="/home/spike/.ivy2/cache/com.pauldijou/jwt-core_2.12/ivy-0.14.1.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/pauldijou/jwt-core_2.12/0.14.1/jwt-core_2.12-0.14.1.pom"/>
+				<metadata-artifact status="no" details="" size="3353" time="0" location="/home/spike/.ivy2/cache/com.pauldijou/jwt-play-json_2.12/ivy-0.14.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/pauldijou/jwt-play-json_2.12/0.14.1/jwt-play-json_2.12-0.14.1.pom"/>
 				<caller organisation="default" name="soom_2.12" conf="compile" rev="0.14.1" rev-constraint-default="0.14.1" rev-constraint-dynamic="0.14.1" callerrev="0.1"/>
 				<artifacts>
-					<artifact name="jwt-core_2.12" type="jar" ext="jar" status="successful" details="" size="104946" time="174" location="/home/spike/.ivy2/cache/com.pauldijou/jwt-core_2.12/jars/jwt-core_2.12-0.14.1.jar">
+					<artifact name="jwt-play-json_2.12" type="jar" ext="jar" status="no" details="" size="26018" time="0" location="/home/spike/.ivy2/cache/com.pauldijou/jwt-play-json_2.12/jars/jwt-play-json_2.12-0.14.1.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/pauldijou/jwt-play-json_2.12/0.14.1/jwt-play-json_2.12-0.14.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.pauldijou" name="jwt-json-common_2.12">
+			<revision name="0.14.1" status="release" pubdate="20171030055524" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://pauldijou.fr/jwt-scala/" extra-info.apiURL="http://pauldijou.fr/jwt-scala/api/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="40">
+				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+				<metadata-artifact status="no" details="" size="3198" time="0" location="/home/spike/.ivy2/cache/com.pauldijou/jwt-json-common_2.12/ivy-0.14.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/pauldijou/jwt-json-common_2.12/0.14.1/jwt-json-common_2.12-0.14.1.pom"/>
+				<caller organisation="com.pauldijou" name="jwt-play-json_2.12" conf="default, compile, runtime, master" rev="0.14.1" rev-constraint-default="0.14.1" rev-constraint-dynamic="0.14.1" callerrev="0.14.1"/>
+				<artifacts>
+					<artifact name="jwt-json-common_2.12" type="jar" ext="jar" status="no" details="" size="8307" time="0" location="/home/spike/.ivy2/cache/com.pauldijou/jwt-json-common_2.12/jars/jwt-json-common_2.12-0.14.1.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/pauldijou/jwt-json-common_2.12/0.14.1/jwt-json-common_2.12-0.14.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.pauldijou" name="jwt-core_2.12">
+			<revision name="0.14.1" status="release" pubdate="20171030055447" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://pauldijou.fr/jwt-scala/" extra-info.apiURL="http://pauldijou.fr/jwt-scala/api/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="41">
+				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+				<metadata-artifact status="no" details="" size="3330" time="0" location="/home/spike/.ivy2/cache/com.pauldijou/jwt-core_2.12/ivy-0.14.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/pauldijou/jwt-core_2.12/0.14.1/jwt-core_2.12-0.14.1.pom"/>
+				<caller organisation="com.pauldijou" name="jwt-json-common_2.12" conf="compile, runtime" rev="0.14.1" rev-constraint-default="0.14.1" rev-constraint-dynamic="0.14.1" callerrev="0.14.1"/>
+				<artifacts>
+					<artifact name="jwt-core_2.12" type="jar" ext="jar" status="no" details="" size="104946" time="0" location="/home/spike/.ivy2/cache/com.pauldijou/jwt-core_2.12/jars/jwt-core_2.12-0.14.1.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/pauldijou/jwt-core_2.12/0.14.1/jwt-core_2.12-0.14.1.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.bouncycastle" name="bcpkix-jdk15on">
-			<revision name="1.57" status="release" pubdate="20170514172611" resolver="public" artresolver="public" homepage="http://www.bouncycastle.org/java.html" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="40">
+			<revision name="1.57" status="release" pubdate="20170514172611" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.bouncycastle.org/java.html" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="43">
 				<license name="Bouncy Castle Licence" url="http://www.bouncycastle.org/licence.html"/>
-				<metadata-artifact status="successful" details="" size="1480" time="95" location="/home/spike/.ivy2/cache/org.bouncycastle/bcpkix-jdk15on/ivy-1.57.xml" searched="true" original-local-location="/home/spike/.ivy2/cache/org.bouncycastle/bcpkix-jdk15on/ivy-1.57.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/bouncycastle/bcpkix-jdk15on/1.57/bcpkix-jdk15on-1.57.pom"/>
-				<caller organisation="com.pauldijou" name="jwt-core_2.12" conf="default, compile, runtime, master" rev="1.57" rev-constraint-default="1.57" rev-constraint-dynamic="1.57" callerrev="0.14.1"/>
+				<metadata-artifact status="no" details="" size="2927" time="0" location="/home/spike/.ivy2/cache/org.bouncycastle/bcpkix-jdk15on/ivy-1.57.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/bouncycastle/bcpkix-jdk15on/1.57/bcpkix-jdk15on-1.57.pom"/>
+				<caller organisation="com.pauldijou" name="jwt-core_2.12" conf="compile, runtime" rev="1.57" rev-constraint-default="1.57" rev-constraint-dynamic="1.57" callerrev="0.14.1"/>
 				<artifacts>
-					<artifact name="bcpkix-jdk15on" type="jar" ext="jar" status="successful" details="" size="775948" time="484" location="/home/spike/.ivy2/cache/org.bouncycastle/bcpkix-jdk15on/jars/bcpkix-jdk15on-1.57.jar">
+					<artifact name="bcpkix-jdk15on" type="jar" ext="jar" status="no" details="" size="775948" time="0" location="/home/spike/.ivy2/cache/org.bouncycastle/bcpkix-jdk15on/jars/bcpkix-jdk15on-1.57.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/bouncycastle/bcpkix-jdk15on/1.57/bcpkix-jdk15on-1.57.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.bouncycastle" name="bcprov-jdk15on">
-			<revision name="1.57" status="release" pubdate="20170514172435" resolver="public" artresolver="public" homepage="http://www.bouncycastle.org/java.html" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="41">
+			<revision name="1.57" status="release" pubdate="20170514172435" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.bouncycastle.org/java.html" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="44">
 				<license name="Bouncy Castle Licence" url="http://www.bouncycastle.org/licence.html"/>
-				<metadata-artifact status="successful" details="" size="1156" time="92" location="/home/spike/.ivy2/cache/org.bouncycastle/bcprov-jdk15on/ivy-1.57.xml" searched="true" original-local-location="/home/spike/.ivy2/cache/org.bouncycastle/bcprov-jdk15on/ivy-1.57.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/bouncycastle/bcprov-jdk15on/1.57/bcprov-jdk15on-1.57.pom"/>
+				<metadata-artifact status="no" details="" size="2676" time="0" location="/home/spike/.ivy2/cache/org.bouncycastle/bcprov-jdk15on/ivy-1.57.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/bouncycastle/bcprov-jdk15on/1.57/bcprov-jdk15on-1.57.pom"/>
 				<caller organisation="org.bouncycastle" name="bcpkix-jdk15on" conf="compile, runtime" rev="1.57" rev-constraint-default="1.57" rev-constraint-dynamic="1.57" callerrev="1.57"/>
 				<artifacts>
-					<artifact name="bcprov-jdk15on" type="jar" ext="jar" status="successful" details="" size="3759724" time="918" location="/home/spike/.ivy2/cache/org.bouncycastle/bcprov-jdk15on/jars/bcprov-jdk15on-1.57.jar">
+					<artifact name="bcprov-jdk15on" type="jar" ext="jar" status="no" details="" size="3759724" time="0" location="/home/spike/.ivy2/cache/org.bouncycastle/bcprov-jdk15on/jars/bcprov-jdk15on-1.57.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/bouncycastle/bcprov-jdk15on/1.57/bcprov-jdk15on-1.57.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="com.pauldijou" name="jwt-core-impl_2.12">
-			<revision name="0.14.1" status="release" pubdate="20171030055615" resolver="public" artresolver="public" homepage="http://pauldijou.fr/jwt-scala/" extra-info.apiURL="http://pauldijou.fr/jwt-scala/api/" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="39">
+			<revision name="0.14.1" status="release" pubdate="20171030055615" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://pauldijou.fr/jwt-scala/" extra-info.apiURL="http://pauldijou.fr/jwt-scala/api/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="42">
 				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
-				<metadata-artifact status="successful" details="" size="1973" time="95" location="/home/spike/.ivy2/cache/com.pauldijou/jwt-core-impl_2.12/ivy-0.14.1.xml" searched="true" original-local-location="/home/spike/.ivy2/cache/com.pauldijou/jwt-core-impl_2.12/ivy-0.14.1.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/pauldijou/jwt-core-impl_2.12/0.14.1/jwt-core-impl_2.12-0.14.1.pom"/>
-				<caller organisation="com.pauldijou" name="jwt-core_2.12" conf="default, compile, runtime, master" rev="0.14.1" rev-constraint-default="0.14.1" rev-constraint-dynamic="0.14.1" callerrev="0.14.1"/>
+				<metadata-artifact status="no" details="" size="3046" time="0" location="/home/spike/.ivy2/cache/com.pauldijou/jwt-core-impl_2.12/ivy-0.14.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/pauldijou/jwt-core-impl_2.12/0.14.1/jwt-core-impl_2.12-0.14.1.pom"/>
+				<caller organisation="com.pauldijou" name="jwt-core_2.12" conf="compile, runtime" rev="0.14.1" rev-constraint-default="0.14.1" rev-constraint-dynamic="0.14.1" callerrev="0.14.1"/>
 				<artifacts>
-					<artifact name="jwt-core-impl_2.12" type="jar" ext="jar" status="successful" details="" size="3154" time="211" location="/home/spike/.ivy2/cache/com.pauldijou/jwt-core-impl_2.12/jars/jwt-core-impl_2.12-0.14.1.jar">
+					<artifact name="jwt-core-impl_2.12" type="jar" ext="jar" status="no" details="" size="3154" time="0" location="/home/spike/.ivy2/cache/com.pauldijou/jwt-core-impl_2.12/jars/jwt-core-impl_2.12-0.14.1.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/pauldijou/jwt-core-impl_2.12/0.14.1/jwt-core-impl_2.12-0.14.1.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="io.circe" name="circe-parser_2.12">
-			<revision name="0.9.0" status="release" pubdate="20180101082957" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/circe/circe" extra-info.apiURL="https://circe.github.io/circe/api/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="35">
+			<revision name="0.9.0" status="release" pubdate="20180101082957" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/circe/circe" extra-info.apiURL="https://circe.github.io/circe/api/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="36">
 				<license name="Apache 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
 				<metadata-artifact status="no" details="" size="3079" time="0" location="/home/spike/.ivy2/cache/io.circe/circe-parser_2.12/ivy-0.9.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/io/circe/circe-parser_2.12/0.9.0/circe-parser_2.12-0.9.0.pom"/>
 				<caller organisation="default" name="soom_2.12" conf="compile" rev="0.9.0" rev-constraint-default="0.9.0" rev-constraint-dynamic="0.9.0" callerrev="0.1"/>
@@ -70,7 +204,7 @@
 			</revision>
 		</module>
 		<module organisation="io.circe" name="circe-jawn_2.12">
-			<revision name="0.9.0" status="release" pubdate="20180101082927" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/circe/circe" extra-info.apiURL="https://circe.github.io/circe/api/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="36">
+			<revision name="0.9.0" status="release" pubdate="20180101082927" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/circe/circe" extra-info.apiURL="https://circe.github.io/circe/api/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="37">
 				<license name="Apache 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
 				<metadata-artifact status="no" details="" size="3081" time="0" location="/home/spike/.ivy2/cache/io.circe/circe-jawn_2.12/ivy-0.9.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/io/circe/circe-jawn_2.12/0.9.0/circe-jawn_2.12-0.9.0.pom"/>
 				<caller organisation="io.circe" name="circe-parser_2.12" conf="default, compile, runtime, master" rev="0.9.0" rev-constraint-default="0.9.0" rev-constraint-dynamic="0.9.0" callerrev="0.9.0"/>
@@ -82,7 +216,7 @@
 			</revision>
 		</module>
 		<module organisation="org.spire-math" name="jawn-parser_2.12">
-			<revision name="0.11.0" status="release" pubdate="20170702091838" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://github.com/non/jawn" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="37">
+			<revision name="0.11.0" status="release" pubdate="20170702091838" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://github.com/non/jawn" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="38">
 				<license name="MIT" url="http://opensource.org/licenses/MIT"/>
 				<metadata-artifact status="no" details="" size="2879" time="0" location="/home/spike/.ivy2/cache/org.spire-math/jawn-parser_2.12/ivy-0.11.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/spire-math/jawn-parser_2.12/0.11.0/jawn-parser_2.12-0.11.0.pom"/>
 				<caller organisation="io.circe" name="circe-jawn_2.12" conf="compile, runtime" rev="0.11.0" rev-constraint-default="0.11.0" rev-constraint-dynamic="0.11.0" callerrev="0.9.0"/>
@@ -94,7 +228,7 @@
 			</revision>
 		</module>
 		<module organisation="io.circe" name="circe-generic_2.12">
-			<revision name="0.9.0" status="release" pubdate="20180101082958" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/circe/circe" extra-info.apiURL="https://circe.github.io/circe/api/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="33">
+			<revision name="0.9.0" status="release" pubdate="20180101082958" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/circe/circe" extra-info.apiURL="https://circe.github.io/circe/api/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="34">
 				<license name="Apache 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
 				<metadata-artifact status="no" details="" size="3536" time="0" location="/home/spike/.ivy2/cache/io.circe/circe-generic_2.12/ivy-0.9.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/io/circe/circe-generic_2.12/0.9.0/circe-generic_2.12-0.9.0.pom"/>
 				<caller organisation="default" name="soom_2.12" conf="compile" rev="0.9.0" rev-constraint-default="0.9.0" rev-constraint-dynamic="0.9.0" callerrev="0.1"/>
@@ -106,7 +240,7 @@
 			</revision>
 		</module>
 		<module organisation="com.chuusai" name="shapeless_2.12">
-			<revision name="2.3.3" status="release" pubdate="20171231065153" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/milessabin/shapeless" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="34">
+			<revision name="2.3.3" status="release" pubdate="20171231065153" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/milessabin/shapeless" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="35">
 				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="3230" time="0" location="/home/spike/.ivy2/cache/com.chuusai/shapeless_2.12/ivy-2.3.3.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/chuusai/shapeless_2.12/2.3.3/shapeless_2.12-2.3.3.pom"/>
 				<caller organisation="io.circe" name="circe-generic_2.12" conf="default, compile, runtime, master" rev="2.3.3" rev-constraint-default="2.3.3" rev-constraint-dynamic="2.3.3" callerrev="0.9.0"/>
@@ -118,7 +252,7 @@
 			</revision>
 		</module>
 		<module organisation="io.circe" name="circe-core_2.12">
-			<revision name="0.9.0" status="release" pubdate="20180101082909" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/circe/circe" extra-info.apiURL="https://circe.github.io/circe/api/" downloaded="false" searched="false" default="false" conf="default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master" position="31">
+			<revision name="0.9.0" status="release" pubdate="20180101082909" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/circe/circe" extra-info.apiURL="https://circe.github.io/circe/api/" downloaded="false" searched="false" default="false" conf="default, compile, runtime(*), master(compile), runtime, default(compile), compile(*), master" position="32">
 				<license name="Apache 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
 				<metadata-artifact status="no" details="" size="3080" time="0" location="/home/spike/.ivy2/cache/io.circe/circe-core_2.12/ivy-0.9.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/io/circe/circe-core_2.12/0.9.0/circe-core_2.12-0.9.0.pom"/>
 				<caller organisation="io.circe" name="circe-generic_2.12" conf="default, compile, runtime, master" rev="0.9.0" rev-constraint-default="0.9.0" rev-constraint-dynamic="0.9.0" callerrev="0.9.0"/>
@@ -133,13 +267,25 @@
 			</revision>
 		</module>
 		<module organisation="io.circe" name="circe-numbers_2.12">
-			<revision name="0.9.0" status="release" pubdate="20180101082806" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/circe/circe" extra-info.apiURL="https://circe.github.io/circe/api/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="32">
+			<revision name="0.9.0" status="release" pubdate="20180101082806" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/circe/circe" extra-info.apiURL="https://circe.github.io/circe/api/" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="33">
 				<license name="Apache 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
 				<metadata-artifact status="no" details="" size="2798" time="0" location="/home/spike/.ivy2/cache/io.circe/circe-numbers_2.12/ivy-0.9.0.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/io/circe/circe-numbers_2.12/0.9.0/circe-numbers_2.12-0.9.0.pom"/>
 				<caller organisation="io.circe" name="circe-core_2.12" conf="default, compile, runtime, master" rev="0.9.0" rev-constraint-default="0.9.0" rev-constraint-dynamic="0.9.0" callerrev="0.9.0"/>
 				<artifacts>
 					<artifact name="circe-numbers_2.12" type="jar" ext="jar" status="no" details="" size="14015" time="0" location="/home/spike/.ivy2/cache/io.circe/circe-numbers_2.12/jars/circe-numbers_2.12-0.9.0.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/io/circe/circe-numbers_2.12/0.9.0/circe-numbers_2.12-0.9.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.softwaremill.sttp" name="core_2.12">
+			<revision name="1.1.4" status="release" pubdate="20180111084858" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://softwaremill.com/open-source" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="31">
+				<license name="Apache-2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="2897" time="0" location="/home/spike/.ivy2/cache/com.softwaremill.sttp/core_2.12/ivy-1.1.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/softwaremill/sttp/core_2.12/1.1.4/core_2.12-1.1.4.pom"/>
+				<caller organisation="default" name="soom_2.12" conf="compile" rev="1.1.4" rev-constraint-default="1.1.4" rev-constraint-dynamic="1.1.4" callerrev="0.1"/>
+				<artifacts>
+					<artifact name="core_2.12" type="jar" ext="jar" status="no" details="" size="306145" time="0" location="/home/spike/.ivy2/cache/com.softwaremill.sttp/core_2.12/jars/core_2.12-1.1.4.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/softwaremill/sttp/core_2.12/1.1.4/core_2.12-1.1.4.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
@@ -391,6 +537,7 @@
 			<revision name="1.1.1" status="release" pubdate="20161102014258" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/milessabin/macro-compat" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="15">
 				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
 				<metadata-artifact status="no" details="" size="2964" time="0" location="/home/spike/.ivy2/cache/org.typelevel/macro-compat_2.12/ivy-1.1.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/typelevel/macro-compat_2.12/1.1.1/macro-compat_2.12-1.1.1.pom"/>
+				<caller organisation="com.typesafe.play" name="play-json_2.12" conf="default, compile, runtime, master" rev="1.1.1" rev-constraint-default="1.1.1" rev-constraint-dynamic="1.1.1" callerrev="2.6.7"/>
 				<caller organisation="io.circe" name="circe-generic_2.12" conf="default, compile, runtime, master" rev="1.1.1" rev-constraint-default="1.1.1" rev-constraint-dynamic="1.1.1" callerrev="0.9.0"/>
 				<caller organisation="org.typelevel" name="catalysts-macros_2.12" conf="compile, runtime" rev="1.1.1" rev-constraint-default="1.1.1" rev-constraint-dynamic="1.1.1" callerrev="0.0.5"/>
 				<caller organisation="com.propensive" name="contextual_2.12" conf="compile, runtime" rev="1.1.1" rev-constraint-default="1.1.1" rev-constraint-dynamic="1.1.1" callerrev="1.0.1"/>
@@ -435,6 +582,7 @@
 			<revision name="2.12.4" status="release" pubdate="20171011002224" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" extra-info.apiURL="http://www.scala-lang.org/api/2.12.4/" downloaded="false" searched="false" default="false" conf="master(*), compile, runtime(*), master(compile), runtime, compile(*), master" position="4">
 				<license name="BSD 3-Clause" url="http://www.scala-lang.org/license.html"/>
 				<metadata-artifact status="no" details="" size="2637" time="0" location="/home/spike/.ivy2/cache/org.scala-lang/scala-reflect/ivy-2.12.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.12.4/scala-reflect-2.12.4.pom"/>
+				<caller organisation="com.typesafe.play" name="play-json_2.12" conf="default, compile, runtime, master" rev="2.12.4" rev-constraint-default="2.12.4" rev-constraint-dynamic="2.12.4" callerrev="2.6.7"/>
 				<caller organisation="com.propensive" name="contextual_2.12" conf="compile, runtime" rev="2.12.4" rev-constraint-default="2.12.4" rev-constraint-dynamic="2.12.4" callerrev="1.0.1"/>
 				<caller organisation="org.scala-lang" name="scala-compiler" conf="compile, runtime" rev="2.12.4" rev-constraint-default="2.12.4" rev-constraint-dynamic="2.12.4" callerrev="2.12.4"/>
 				<caller organisation="com.github.julien-truffaut" name="monocle-macro_2.12" conf="compile, runtime" rev="2.12.4" rev-constraint-default="2.12.4" rev-constraint-dynamic="2.12.4" callerrev="1.5.0-cats"/>
@@ -549,7 +697,7 @@
 				<license name="BSD 3-Clause" url="http://www.scala-lang.org/license.html"/>
 				<metadata-artifact status="no" details="" size="2471" time="0" location="/home/spike/.ivy2/cache/org.scala-lang/scala-library/ivy-2.12.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.12.4/scala-library-2.12.4.pom"/>
 				<caller organisation="org.typelevel" name="cats-free_2.12" conf="compile, runtime" rev="2.12.4" rev-constraint-default="2.12.4" rev-constraint-dynamic="2.12.4" callerrev="1.0.1"/>
-				<caller organisation="com.pauldijou" name="jwt-core_2.12" conf="default, compile, runtime, master" rev="2.12.4" rev-constraint-default="2.12.4" rev-constraint-dynamic="2.12.4" callerrev="0.14.1"/>
+				<caller organisation="com.pauldijou" name="jwt-core_2.12" conf="compile, runtime" rev="2.12.4" rev-constraint-default="2.12.4" rev-constraint-dynamic="2.12.4" callerrev="0.14.1"/>
 				<caller organisation="org.typelevel" name="cats-laws_2.12" conf="compile, runtime" rev="2.12.4" rev-constraint-default="2.12.4" rev-constraint-dynamic="2.12.4" callerrev="1.0.1"/>
 				<caller organisation="org.typelevel" name="cats-core_2.12" conf="default, compile, runtime, master" rev="2.12.4" rev-constraint-default="2.12.4" rev-constraint-dynamic="2.12.4" callerrev="1.0.1"/>
 				<caller organisation="org.typelevel" name="catalysts-platform_2.12" conf="compile, runtime" rev="2.12.4" rev-constraint-default="2.12.4" rev-constraint-dynamic="2.12.4" callerrev="0.0.5"/>
@@ -568,6 +716,8 @@
 				<caller organisation="com.propensive" name="contextual_2.12" conf="compile, runtime" rev="2.12.4" rev-constraint-default="2.12.4" rev-constraint-dynamic="2.12.4" callerrev="1.0.1"/>
 				<caller organisation="org.typelevel" name="cats-kernel_2.12" conf="compile, runtime" rev="2.12.4" rev-constraint-default="2.12.4" rev-constraint-dynamic="2.12.4" callerrev="1.0.1"/>
 				<caller organisation="org.typelevel" name="machinist_2.12" conf="compile, runtime" rev="2.12.4" rev-constraint-default="2.12.4" rev-constraint-dynamic="2.12.4" callerrev="0.6.2"/>
+				<caller organisation="com.softwaremill.sttp" name="core_2.12" conf="default, compile, runtime, master" rev="2.12.4" rev-constraint-default="2.12.4" rev-constraint-dynamic="2.12.4" callerrev="1.1.4"/>
+				<caller organisation="com.pauldijou" name="jwt-play-json_2.12" conf="default, compile, runtime, master" rev="2.12.4" rev-constraint-default="2.12.4" rev-constraint-dynamic="2.12.4" callerrev="0.14.1"/>
 				<caller organisation="org.scala-lang" name="scala-reflect" conf="compile, runtime" rev="2.12.4" rev-constraint-default="2.12.4" rev-constraint-dynamic="2.12.4" callerrev="2.12.4"/>
 				<caller organisation="org.typelevel" name="cats-kernel-laws_2.12" conf="compile, runtime" rev="2.12.4" rev-constraint-default="2.12.4" rev-constraint-dynamic="2.12.4" callerrev="1.0.1"/>
 				<caller organisation="org.scalacheck" name="scalacheck_2.12" conf="compile, runtime" rev="2.12.4" rev-constraint-default="2.12.4" rev-constraint-dynamic="2.12.4" callerrev="1.13.5"/>
@@ -575,14 +725,17 @@
 				<caller organisation="org.spire-math" name="jawn-parser_2.12" conf="compile, runtime" rev="2.12.4" rev-constraint-default="2.12.4" rev-constraint-dynamic="2.12.4" callerrev="0.11.0"/>
 				<caller organisation="com.github.julien-truffaut" name="monocle-macro_2.12" conf="compile, runtime" rev="2.12.4" rev-constraint-default="2.12.4" rev-constraint-dynamic="2.12.4" callerrev="1.5.0-cats"/>
 				<caller organisation="com.pauldijou" name="jwt-core-impl_2.12" conf="compile, runtime" rev="2.12.4" rev-constraint-default="2.12.4" rev-constraint-dynamic="2.12.4" callerrev="0.14.1"/>
+				<caller organisation="com.typesafe.play" name="play-functional_2.12" conf="compile, runtime" rev="2.12.4" rev-constraint-default="2.12.4" rev-constraint-dynamic="2.12.4" callerrev="2.6.7"/>
 				<caller organisation="org.typelevel" name="cats-effect_2.12" conf="compile, runtime" rev="2.12.4" rev-constraint-default="2.12.4" rev-constraint-dynamic="2.12.4" callerrev="0.8"/>
 				<caller organisation="io.circe" name="circe-core_2.12" conf="default, compile, runtime, master" rev="2.12.4" rev-constraint-default="2.12.4" rev-constraint-dynamic="2.12.4" callerrev="0.9.0"/>
 				<caller organisation="org.typelevel" name="discipline_2.12" conf="compile, runtime" rev="2.12.4" rev-constraint-default="2.12.4" rev-constraint-dynamic="2.12.4" callerrev="0.8"/>
+				<caller organisation="com.typesafe.play" name="play-json_2.12" conf="default, compile, runtime, master" rev="2.12.4" rev-constraint-default="2.12.4" rev-constraint-dynamic="2.12.4" callerrev="2.6.7"/>
 				<caller organisation="org.typelevel" name="alleycats-core_2.12" conf="compile, runtime" rev="2.12.4" rev-constraint-default="2.12.4" rev-constraint-dynamic="2.12.4" callerrev="1.0.1"/>
 				<caller organisation="com.github.mpilquist" name="simulacrum_2.12" conf="compile, runtime" rev="2.12.4" rev-constraint-default="2.12.4" rev-constraint-dynamic="2.12.4" callerrev="0.11.0"/>
 				<caller organisation="com.chuusai" name="shapeless_2.12" conf="compile, runtime" rev="2.12.4" rev-constraint-default="2.12.4" rev-constraint-dynamic="2.12.4" callerrev="2.3.3"/>
 				<caller organisation="default" name="soom_2.12" conf="compile" rev="2.12.4" rev-constraint-default="2.12.4" rev-constraint-dynamic="2.12.4" callerrev="0.1"/>
 				<caller organisation="org.typelevel" name="macro-compat_2.12" conf="compile, runtime" rev="2.12.4" rev-constraint-default="2.12.4" rev-constraint-dynamic="2.12.4" callerrev="1.1.1"/>
+				<caller organisation="com.pauldijou" name="jwt-json-common_2.12" conf="compile, runtime" rev="2.12.4" rev-constraint-default="2.12.4" rev-constraint-dynamic="2.12.4" callerrev="0.14.1"/>
 				<artifacts>
 					<artifact name="scala-library" type="jar" ext="jar" status="no" details="" size="5247152" time="0" location="/home/spike/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.12.4.jar">
 						<origin-location is-local="false" location="UNKNOWN"/>

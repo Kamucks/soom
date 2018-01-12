@@ -4,7 +4,7 @@
 		module="soom_2.12"
 		revision="0.1"
 		status="integration"
-		publication="20180111134636"
+		publication="20180111155813"
 	>
 		<description>
 		soom
@@ -34,9 +34,11 @@
 		<dependency org="org.scala-lang" name="scala-library" rev="2.12.4" conf="scala-tool->default,optional(default);compile->default(compile)"/>
 		<dependency org="org.typelevel" name="cats-core_2.12" rev="1.0.1" conf="compile->default(compile)"/>
 		<dependency org="com.pepegar" name="hammock-core_2.12" rev="0.8.1" conf="compile->default(compile)"/>
+		<dependency org="com.softwaremill.sttp" name="core_2.12" rev="1.1.4" conf="compile->default(compile)"/>
 		<dependency org="io.circe" name="circe-core_2.12" rev="0.9.0" conf="compile->default(compile)"/>
 		<dependency org="io.circe" name="circe-generic_2.12" rev="0.9.0" conf="compile->default(compile)"/>
 		<dependency org="io.circe" name="circe-parser_2.12" rev="0.9.0" conf="compile->default(compile)"/>
-		<dependency org="com.pauldijou" name="jwt-core_2.12" rev="0.14.1" conf="compile->default(compile)"/>
+		<dependency org="com.pauldijou" name="jwt-play-json_2.12" rev="0.14.1" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.play" name="play-json_2.12" rev="2.6.7" conf="compile->default(compile)"/>
 	</dependencies>
 </ivy-module>
